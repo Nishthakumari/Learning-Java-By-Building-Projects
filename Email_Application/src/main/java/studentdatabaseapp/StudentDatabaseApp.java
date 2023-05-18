@@ -7,6 +7,7 @@ public class StudentDatabaseApp {
         //Create n numbers of new students
 
         Student st1 = new Student();
+        st1.enroll();
 
     }
 }

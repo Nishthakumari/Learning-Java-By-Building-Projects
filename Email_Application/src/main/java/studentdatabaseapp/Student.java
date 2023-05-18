@@ -8,7 +8,7 @@ public class Student {
     private String lastName;
     private int gradeYear;
     private String studentId;
-    private String courses;
+    private String courses ;
     private int tuitionBalance;
     private static int costOfCourse = 600;
     private static int id = 1000;
@@ -17,10 +17,10 @@ public class Student {
     public Student()
     {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your firstname: " );
+        System.out.print("Enter your firstname: " );
         this.firstName = sc.nextLine();
 
-        System.out.println("Enter your lastname: " );
+        System.out.print("Enter your lastname: " );
         this.lastName = sc.nextLine();
 
         System.out.println("1 Freshman\n2 Sophmore\n3 Junior\n4 Senior\nEnter student class level: ");
@@ -43,6 +43,27 @@ public class Student {
 
 
     //Enroll in courses
+    public void enroll(){
+        do{
+            System.out.print("Enter course to enroll (Q for quit): ");
+            Scanner sc= new Scanner(System.in);
+            String course = sc.nextLine();
+
+            if(!course.equals("Q"))
+            {
+                courses = courses + '\n' + course;
+                tuitionBalance = tuitionBalance + costOfCourse;
+            }else{
+                System.out.println("BREAK");
+                break;
+            }
+
+
+        }while(1!=0);
+
+        System.out.println("ENROLLED in " + courses);
+        System.out.println("TUTION BALANCE " + tuitionBalance);
+    }
 
     //View balance
 

@@ -84,4 +84,16 @@ public class Student {
 
     //Show status
 
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gradeYear=" + gradeYear +
+                ", studentId='" + studentId + '\'' +
+                ", courses='" + courses + '\'' +
+                ", tuitionBalance=" + tuitionBalance +
+                '}';
+    }
 }

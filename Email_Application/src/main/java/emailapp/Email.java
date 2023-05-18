@@ -1,5 +1,7 @@
 package emailapp;
 
+import java.util.Scanner;
+
 public class Email {
     private String firstName;
     private String lastName;
@@ -9,8 +11,35 @@ public class Email {
     private String alternateEmail;
 
     //Constructor to receive first name and last name
+    public Email(String firstName, String lastName)
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+        System.out.println("Email is " + this.firstName + " " + this.lastName);
+
+        this.department = setDepartment();
+
+        System.out.println("Departemnt " + this.department);
+    }
 
     //Ask for department
+    private String setDepartment(){
+        System.out.print("DEPARTMENT CODES\n1 for Sales\n2 for Development\n3 for Accounting\n0 for none." +
+                " Enter department code: ");
+        Scanner in = new Scanner(System.in);
+        int depChoice = in.nextInt();
+
+        if(depChoice==1)
+            return "sales";
+        else if(depChoice==2)
+            return  "dev";
+        else if (depChoice==3)
+            return "acct";
+        else
+            return "";
+    }
+
 
     //Generate a random password
 

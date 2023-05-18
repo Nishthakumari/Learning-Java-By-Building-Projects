@@ -10,7 +10,7 @@ public class Email {
     private String email;
     private String department;
     private int defaultPasswordLength = 10;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private String alternateEmail;
     private String companySuffix = "anycompany.com";
 
@@ -98,5 +98,11 @@ public class Email {
 
     public String getPassword() {
         return password;
+    }
+
+    public String showInfo(){
+        return "DISPLAY NAME: " + firstName + " " + lastName +
+                "\nCOMPANY EMAIL: " + email +
+                "\nMAILBOX CAPACITY: " + mailboxCapacity + " mb";
     }
 }
